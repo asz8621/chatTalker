@@ -1,0 +1,281 @@
+@import 'bootstrap/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Noto+Sans+TC:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
+
+hr {
+  margin: 1.5rem 0;
+  @media (max-width: 576px) {
+      margin: 1rem 0;
+  }
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.bgCover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgContain {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.font-second {
+  font-family: 'Comfortaa';
+}
+
+
+.header{
+  margin-bottom: 217px;
+  @media (max-width: 576px) {
+    margin-bottom: 92px;
+  }
+  .navbar {
+    @media (max-width: 576px) {
+      border-bottom: #FFD153 2px solid;
+    }
+  }
+  .logo {
+    width: 218px;
+    height: 40px;
+    transition: .25s;
+    .logoImg {
+      background-image: url('../images/logo.png');
+      width: 100%;
+      height: 100%;
+    }
+    @media (max-width: 576px) {
+      width: 130px;
+      height: 24px;
+    }
+  }
+  .headerBg {
+    background-image: url('../images/bg_home.svg');
+    width: 850px;
+    height: 768px;
+    top: 0;
+    left: calc(100% - 850px);
+    z-index: -1;
+    transition: .25s;
+    @media (max-width: 992px) {
+      width: 100%;
+      height: 100%;
+      background-position: right;
+      left: 0;
+    }
+    @media (max-width: 576px) {
+      background-image: url('../images/bg_home_sm.svg');
+      width: 334px;
+      height: 245px;
+      top: 100%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -100%);
+    }
+    @media (max-width: 375px) {
+      width: calc(100% - 40px);
+    }
+  }
+  .headerBannerBg {
+    background-image: url('../images/home.svg');
+    width: 100%;
+    padding-bottom: 100%;
+    @media (max-width: 576px) {
+      width: 305px;
+      height: 305px;
+      padding-bottom: 0;
+      margin: auto;
+    }
+    @media (max-width: 375px) {
+      width: 100%;
+    }
+  }
+}
+
+.platform {
+  &::before {
+    content: '';
+    position: absolute;
+    top: -85%;
+    left: 0;
+    background-image: url('../images/ball01.svg');
+    background-size: cover;
+    width: 138px;
+    height: 360px;
+    transform: rotate(180deg);
+    transition: .25s;
+    @media (max-width: 992px) {
+      width: 108px;
+      height: 282px;
+      top: -50%;
+    }
+    @media (max-width: 768px) {
+      width: 78px;
+      height: 204px;
+      top: -25%;
+    }
+    @media (max-width: 576px) {
+      width: 49px;
+      height: 126px;
+      top: 16px;
+    }
+  }
+  .platformImg {
+    width: 90px;
+    height: 90px;
+    @media (max-width: 576px) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.serve {
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -35%;
+    right: 0;
+    width: 210px;
+    height: 310px;
+    background-image: url('../images/ball02.svg');
+    background-size: cover;
+    z-index: -1;
+    transition: .25s;
+    @media (max-width: 992px) {
+      width: 170px;
+      height: 252px;
+      bottom: -10%;
+    }
+    @media (max-width: 768px) {
+      width: 130px;
+      height: 194px;
+      bottom: -45px;
+    }
+    @media (max-width: 576px) {
+      width: 88px;
+      height: 135px;
+    }
+  }
+}
+
+.description {
+  .descriptionImg {
+    width: 86px;
+    height: 86px;
+    box-shadow: 0px 2px 10px #00000014;
+  }
+}
+
+.evaluation {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 36px;
+    left: 48px;
+    background-image: url('../images/ball03.svg');
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    transition: .25s;
+    z-index: -1;
+    @media (max-width: 768px) {
+      width: 77px;
+      left: 0;
+      transform: rotate(180deg);
+    }
+  }
+  .evaluationImg {
+    top: -54px;
+    left: 32px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.footer {
+  .footerBg {
+    background-image: url('../images/footer.png');
+    width: 100%;
+    height: 503px;
+    @media (max-width: 576px) {
+      height: 461px;
+    }
+  }
+  .footerInfo {
+    padding-top: 260px;
+  }
+  .copyright {
+    background: #F5F5F5;
+  }
+}
+
+// slick
+.slick-track {
+  margin-bottom: 24px;
+}
+.slick-dots {
+  li {
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    button {
+      width: 10px;
+      height: 10px;
+      padding: 0;
+      margin: 0;
+      &::before {
+        content: '';
+        background: #DDDDDD;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        opacity: 1;
+      }
+    }
+    &.slick-active {
+      width: 16px;
+      button {
+        width: 16px;
+        &::before {
+          background: #FFD153;
+          width: 16px;
+          height: 10px;
+          border-radius: 50px;
+        }
+      }
+    }
+  }
+}
+
+// 好評 star
+$star-num2: 0px, 24px, 48px, 72px, 96px;
+$star-num: (
+  1: 0px,
+  2: 24px,
+  3: 48px,
+  4: 72px,
+  5: 96px,
+);
+@mixin multiBg2($from: 1, $to: 5) {
+  $url_list: ();
+  $position_list: ();
+  @for $i from $from through $to {
+    $url_string: url('../images/icon_star.svg');
+    $url_list: append($url_list, $url_string, comma);
+    $position_list: append($position_list, nth($star-num2, $i), comma);
+  }
+  background-image: $url_list;
+  background-position: $position_list;
+}
+@each $key, $val in $star-num {
+  .star-#{$key} {
+    @include multiBg2(1, $key);
+    background-repeat: no-repeat;
+    width: nth($star-num2, $key) + 24px;
+  }
+}

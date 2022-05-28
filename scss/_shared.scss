@@ -1,0 +1,24 @@
+hr {
+  margin: 1.5rem 0;
+  @media (max-width: 576px) {
+      margin: 1rem 0;
+  }
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.bgCover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgContain {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.font-second {
+  font-family: 'Comfortaa';
+}

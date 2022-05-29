@@ -48,4 +48,44 @@ $(document).ready(function() {
       },
     ],
   })
+
+  // 方案選擇
+  $('.selectBtn').click(function() {
+    const basic = 600
+    const standard = basic + 1000
+    $(this).addClass('active')
+    $(this).parent().siblings().find('.selectBtn').removeClass('active')
+    switch($(this).attr('data-num')) {
+    case '10000':
+      $('#basicNum').text($(this).attr('data-num'))
+      $('#basicPrice').text(basic)
+      $('#standardNum').text($(this).attr('data-num'))
+      $('#standardPrice').text(standard)
+      break
+    case '15000':
+      $('#basicNum').text($(this).attr('data-num'))
+      $('#basicPrice').text(basic * 2)
+      $('#standardNum').text($(this).attr('data-num'))
+      $('#standardPrice').text(standard * 2)
+      break
+    case '20000':
+      $('#basicNum').text($(this).attr('data-num'))
+      $('#basicPrice').text(basic * 3)
+      $('#standardNum').text($(this).attr('data-num'))
+      $('#standardPrice').text(standard * 3)
+      break
+    case '25000':
+      $('#basicNum').text($(this).attr('data-num'))
+      $('#basicPrice').text(basic * 4)
+      $('#standardNum').text($(this).attr('data-num'))
+      $('#standardPrice').text(standard * 4)
+      break
+    default:
+      $('#basicNum').text($(this).attr('data-num'))
+      $('#basicPrice').text(basic * 5)
+      $('#standardNum').text($(this).attr('data-num'))
+      $('#standardPrice').text(standard * 5)
+      break
+    }
+  })
 })

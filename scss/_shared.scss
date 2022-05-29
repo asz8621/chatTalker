@@ -22,6 +22,29 @@ ul {
 .font-second {
   font-family: 'Comfortaa';
 }
+.navbar {
+  z-index: 9999;
+  transition: .25s;
+  border-bottom: transparent 2px solid;
+  &.scroll {
+    background: #fff;
+    border-bottom: #FFD153 2px solid;
+  }
+}
+.logo {
+  width: 218px;
+  height: 40px;
+  transition: .25s;
+  .logoImg {
+    background-image: url('../images/logo.png');
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: 576px) {
+    width: 130px;
+    height: 24px;
+  }
+}
 .goTop {
   display: none;
   width: 71px;

@@ -40,7 +40,8 @@
   @include transition($btn-transition);
 
   &:hover {
-    color: var(--#{$prefix}btn-hover-color);
+    color: white;
+    // color: var(--#{$prefix}btn-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
     background-color: var(--#{$prefix}btn-hover-bg);
     border-color: var(--#{$prefix}btn-hover-border-color);

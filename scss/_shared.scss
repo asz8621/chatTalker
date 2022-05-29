@@ -22,3 +22,22 @@ ul {
 .font-second {
   font-family: 'Comfortaa';
 }
+.goTop {
+  display: none;
+  width: 71px;
+  height: 71px;
+  line-height: 71px;
+  bottom: 24px;
+  right: 48px;
+  user-select: none;
+  z-index: 9999;
+  transition: .25s;
+  @media (max-width: 576px) {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    bottom: 16px;
+    right: 16px;
+    font-size: 14px;
+  }
+}

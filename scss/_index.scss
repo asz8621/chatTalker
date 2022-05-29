@@ -4,7 +4,11 @@
     margin-bottom: 92px;
   }
   .navbar {
-    @media (max-width: 576px) {
+    z-index: 9999;
+    transition: .25s;
+    border-bottom: transparent 2px solid;
+    &.scroll {
+      background: #fff;
       border-bottom: #FFD153 2px solid;
     }
   }
@@ -49,7 +53,10 @@
       width: calc(100% - 40px);
     }
   }
-  .headerBannerBg {
+  .banner {
+    padding-top: 88px;
+  }
+  .bannerBg {
     background-image: url('../images/home.svg');
     width: 100%;
     padding-bottom: 100%;

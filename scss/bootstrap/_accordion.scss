@@ -40,7 +40,8 @@
   text-align: left; // Reset button style
   background-color: var(--#{$prefix}accordion-btn-bg);
   border: 0;
-  @include border-radius(0);
+  border-radius: var(--#{$prefix}accordion-border-radius);
+  // @include border-radius(0);
   overflow-anchor: none;
   @include transition(var(--#{$prefix}accordion-transition));
 

@@ -1,5 +1,14 @@
 .programHeader{
   height: 470px;
+  background: #F7F9FD 0% 0% no-repeat padding-box;
+  border-radius: 0px 0px 0px 300px;
+  z-index: 3;
+  @media (max-width: 768px) {
+    height: 495px;
+  }
+  @media (max-width: 414px) {
+    border-radius: 0px 0px 0px 150px;
+  }
   .programBannerBg {
     background-image: url('../images/banner.svg');
     width: 885px;
@@ -17,12 +26,11 @@
     @media (max-width: 768px) {
       background-position: top;
     }
-    @media (max-width: 375px) {
+    @media (max-width: 414px) {
       background-image: url('../images/banner_sm.svg');
-      top: 0px;
+      top: 0;
       left: 0;
       background-size: cover;
-      // background-position: initial;
     }
   }
   .programBannerText {
@@ -30,7 +38,19 @@
   }
 }
 
-.SchemeSelection {
+.schemeSelection {
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../images/ball03.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 94px;
+    height: 360px;
+    top: 50%;
+    left: 0;
+    transform: translateX(-50%) rotate(180deg);
+  }
   .peopleNumber {
     justify-content: center;
     @media (max-width: 768px) {
@@ -38,11 +58,17 @@
       overflow-x: scroll;
     }
   }
+  .selectBtn {
+    &.active {
+      background: $primary;
+      color: #fff;
+    }
+  }
   .unit {
     bottom: 0;
   }
   .schemeInfoItem {
-    margin-left: 32px;
+    // margin-left: 32px;
     &::before {
       content: '';
       position: absolute;
@@ -52,12 +78,6 @@
       height: 16px;
       background-image: url('../images/icon_check.svg');
       transform: translate(0, -50%);
-    }
-  }
-  .selectBtn {
-    &.active {
-      background: $primary;
-      color: #fff;
     }
   }
 }

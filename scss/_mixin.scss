@@ -1,0 +1,12 @@
+// 好評 star
+@mixin multiBg2($from: 1, $to: 5) {
+  $url_list: ();
+  $position_list: ();
+  @for $i from $from through $to {
+    $url_string: url('../images/icon_star.svg');
+    $url_list: append($url_list, $url_string, comma);
+    $position_list: append($position_list, nth($star-num2, $i), comma);
+  }
+  background-image: $url_list;
+  background-position: $position_list;
+}

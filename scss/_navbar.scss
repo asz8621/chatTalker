@@ -1,0 +1,18 @@
+.navbar {
+  z-index: 9999;
+  transition: .25s;
+  background: transparent;
+  border-bottom: transparent 2px solid;
+  &.scroll {
+    background: #fff;
+    border-bottom: #FFD153 2px solid;
+  }
+  .logo {
+    width: 218px;
+    height: 40px;
+    @media (max-width: 576px) {
+      width: 130px;
+      height: 24px;
+    }
+  }
+}

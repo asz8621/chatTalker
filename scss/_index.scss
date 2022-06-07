@@ -150,64 +150,6 @@
   }
 }
 
-// slick
-.slick-track {
-  margin-bottom: 24px;
-}
-.slick-dots {
-  li {
-    width: 10px;
-    height: 10px;
-    margin: 0 4px;
-    button {
-      width: 10px;
-      height: 10px;
-      padding: 0;
-      margin: 0;
-      &::before {
-        content: '';
-        background: #DDDDDD;
-        width: 10px;
-        height: 10px;
-        border-radius: 100%;
-        opacity: 1;
-      }
-    }
-    &.slick-active {
-      width: 16px;
-      button {
-        width: 16px;
-        &::before {
-          background: #FFD153;
-          width: 16px;
-          height: 10px;
-          border-radius: 50px;
-        }
-      }
-    }
-  }
-}
-
-// 好評 star
-$star-num2: 0px, 24px, 48px, 72px, 96px;
-$star-num: (
-  1: 0px,
-  2: 24px,
-  3: 48px,
-  4: 72px,
-  5: 96px,
-);
-@mixin multiBg2($from: 1, $to: 5) {
-  $url_list: ();
-  $position_list: ();
-  @for $i from $from through $to {
-    $url_string: url('../images/icon_star.svg');
-    $url_list: append($url_list, $url_string, comma);
-    $position_list: append($position_list, nth($star-num2, $i), comma);
-  }
-  background-image: $url_list;
-  background-position: $position_list;
-}
 @each $key, $val in $star-num {
   .star-#{$key} {
     @include multiBg2(1, $key);

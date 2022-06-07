@@ -1,0 +1,37 @@
+// slick
+.slick-track {
+  margin-bottom: 24px;
+}
+.slick-dots {
+  li {
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    button {
+      width: 10px;
+      height: 10px;
+      padding: 0;
+      margin: 0;
+      &::before {
+        content: '';
+        background: #DDDDDD;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        opacity: 1;
+      }
+    }
+    &.slick-active {
+      width: 16px;
+      button {
+        width: 16px;
+        &::before {
+          background: #FFD153;
+          width: 16px;
+          height: 10px;
+          border-radius: 50px;
+        }
+      }
+    }
+  }
+}

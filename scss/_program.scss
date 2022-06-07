@@ -1,4 +1,4 @@
-.programHeader{
+.programHeader {
   height: 470px;
   background: #F7F9FD 0% 0% no-repeat padding-box;
   border-radius: 0px 0px 0px 300px;
@@ -33,9 +33,6 @@
       background-size: cover;
     }
   }
-  .programBannerText {
-    padding-top: 180px;
-  }
 }
 
 .schemeSelection {
@@ -68,7 +65,6 @@
     bottom: 0;
   }
   .schemeInfoItem {
-    // margin-left: 32px;
     &::before {
       content: '';
       position: absolute;

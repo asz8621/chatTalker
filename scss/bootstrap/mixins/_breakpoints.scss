@@ -125,3 +125,10 @@
     }
   }
 }
+
+// 自定義 $extremum -> min、max, $size -> '375px'
+@mixin media-breakpoint-customize($extremum, $size) {
+  @media (#{$extremum}-width: $size) {
+    @content;
+  }
+}

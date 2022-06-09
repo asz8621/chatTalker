@@ -8,11 +8,11 @@
     border-bottom: #FFD153 2px solid;
   }
   .logo {
-    width: 218px;
-    height: 40px;
-    @media (max-width: 576px) {
-      width: 130px;
-      height: 24px;
+    width: 130px;
+    height: 24px;
+    @include media-breakpoint-up(sm) {
+      width: 218px;
+      height: 40px;
     }
   }
 }

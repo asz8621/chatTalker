@@ -15337,12 +15337,12 @@ fieldset:disabled .btn {
 }
 
 hr {
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
-@media (max-width: 576px) {
+@media (min-width: 576px) {
   hr {
-    margin: 1rem 0;
+    margin: 1.5rem 0;
   }
 }
 
@@ -15382,26 +15382,26 @@ ul {
 }
 
 .navbar .logo {
-  width: 218px;
-  height: 40px;
+  width: 130px;
+  height: 24px;
 }
 
-@media (max-width: 576px) {
+@media (min-width: 576px) {
   .navbar .logo {
-    width: 130px;
-    height: 24px;
+    width: 218px;
+    height: 40px;
   }
 }
 
 .footer .footerBg {
   background-image: url("../images/footer.png");
   width: 100%;
-  height: 503px;
+  height: 461px;
 }
 
-@media (max-width: 576px) {
+@media (min-width: 576px) {
   .footer .footerBg {
-    height: 461px;
+    height: 503px;
   }
 }
 
@@ -15410,50 +15410,51 @@ ul {
 }
 
 .header {
-  margin-bottom: 217px;
+  margin-bottom: 92px;
 }
 
-@media (max-width: 576px) {
+@media (min-width: 576px) {
   .header {
-    margin-bottom: 92px;
+    margin-bottom: 217px;
   }
 }
 
 .header .headerBg {
-  background-image: url("../images/bg_home.svg");
-  width: 850px;
-  height: 768px;
-  top: 0;
-  left: calc(100% - 850px);
+  background-image: url("../images/bg_home_sm.svg");
+  background-position: right;
+  width: calc(100% - 40px);
+  height: 245px;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
   z-index: -1;
   -webkit-transition: .25s;
   transition: .25s;
 }
 
-@media (max-width: 992px) {
+@media (min-width: 375px) {
   .header .headerBg {
+    width: 334px;
+  }
+}
+
+@media (min-width: 576px) {
+  .header .headerBg {
+    background-image: url("../images/bg_home.svg");
     width: 100%;
     height: 100%;
-    background-position: right;
-    left: 0;
   }
 }
 
-@media (max-width: 576px) {
+@media (min-width: 992px) {
   .header .headerBg {
-    background-image: url("../images/bg_home_sm.svg");
-    width: 334px;
-    height: 245px;
-    top: 100%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -100%);
-  }
-}
-
-@media (max-width: 375px) {
-  .header .headerBg {
-    width: calc(100% - 40px);
+    width: 850px;
+    height: 768px;
+    top: 0;
+    left: calc(100% - 850px);
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
@@ -15465,47 +15466,26 @@ ul {
   background-image: url("../images/home.svg");
   width: 100%;
   padding-bottom: 100%;
-}
-
-@media (max-width: 576px) {
-  .header .bannerBg {
-    width: 305px;
-    height: 305px;
-    padding-bottom: 0;
-    margin: auto;
-  }
-}
-
-@media (max-width: 375px) {
-  .header .bannerBg {
-    width: 100%;
-  }
+  margin: auto;
 }
 
 .platform::before {
   content: '';
   position: absolute;
-  top: -85%;
+  top: 16px;
   left: 0;
   background-image: url("../images/ball01.svg");
   background-size: cover;
-  width: 138px;
-  height: 360px;
+  width: 49px;
+  height: 126px;
+  top: 16px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   -webkit-transition: .25s;
   transition: .25s;
 }
 
-@media (max-width: 992px) {
-  .platform::before {
-    width: 108px;
-    height: 282px;
-    top: -50%;
-  }
-}
-
-@media (max-width: 768px) {
+@media (min-width: 576px) {
   .platform::before {
     width: 78px;
     height: 204px;
@@ -15513,33 +15493,41 @@ ul {
   }
 }
 
-@media (max-width: 576px) {
+@media (min-width: 768px) {
   .platform::before {
-    width: 49px;
-    height: 126px;
-    top: 16px;
+    width: 108px;
+    height: 282px;
+    top: -50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .platform::before {
+    width: 138px;
+    height: 360px;
+    top: -85%;
   }
 }
 
 .platform .platformImg {
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
 }
 
-@media (max-width: 576px) {
+@media (min-width: 576px) {
   .platform .platformImg {
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
   }
 }
 
 .serve::after {
   content: '';
   position: absolute;
-  bottom: -35%;
+  bottom: -45px;
   right: 0;
-  width: 210px;
-  height: 310px;
+  width: 88px;
+  height: 135px;
   background-image: url("../images/ball02.svg");
   background-size: cover;
   z-index: -1;
@@ -15547,7 +15535,14 @@ ul {
   transition: .25s;
 }
 
-@media (max-width: 992px) {
+@media (min-width: 576px) {
+  .serve::after {
+    width: 130px;
+    height: 194px;
+  }
+}
+
+@media (min-width: 768px) {
   .serve::after {
     width: 170px;
     height: 252px;
@@ -15555,18 +15550,11 @@ ul {
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 992px) {
   .serve::after {
-    width: 130px;
-    height: 194px;
-    bottom: -45px;
-  }
-}
-
-@media (max-width: 576px) {
-  .serve::after {
-    width: 88px;
-    height: 135px;
+    width: 210px;
+    height: 310px;
+    bottom: -35%;
   }
 }
 
@@ -15581,22 +15569,24 @@ ul {
   content: '';
   position: absolute;
   top: 36px;
-  left: 48px;
+  left: 0;
   background-image: url("../images/ball03.svg");
   background-size: cover;
-  width: 150px;
+  width: 77px;
   height: 150px;
   -webkit-transition: .25s;
   transition: .25s;
   z-index: -1;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .evaluation::before {
-    width: 77px;
-    left: 0;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    width: 150px;
+    left: 48px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 
@@ -15643,56 +15633,55 @@ ul {
 }
 
 .programHeader {
-  height: 470px;
+  height: 495px;
   background: #F7F9FD 0% 0% no-repeat padding-box;
-  border-radius: 0px 0px 0px 300px;
+  border-radius: 0px 0px 0px 150px;
   z-index: 3;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 576px) {
   .programHeader {
-    height: 495px;
+    border-radius: 0px 0px 0px 300px;
   }
 }
 
-@media (max-width: 414px) {
+@media (min-width: 768px) {
   .programHeader {
-    border-radius: 0px 0px 0px 150px;
+    height: 470px;
   }
 }
 
 .programHeader .programBannerBg {
-  background-image: url("../images/banner.svg");
-  width: 885px;
-  height: 546px;
+  background-image: url("../images/banner_sm.svg");
+  background-position: top;
+  background-size: cover;
   top: 0;
-  left: calc(100% - 885px);
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: -1;
   -webkit-transition: .25s;
   transition: .25s;
 }
 
-@media (max-width: 992px) {
+@media (min-width: 414px) {
   .programHeader .programBannerBg {
-    width: 100%;
-    height: 100%;
-    left: 0;
+    background-image: url("../images/banner.svg");
+    background-size: contain;
+  }
+}
+
+@media (min-width: 768px) {
+  .programHeader .programBannerBg {
     background-position: right;
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 992px) {
   .programHeader .programBannerBg {
-    background-position: top;
-  }
-}
-
-@media (max-width: 414px) {
-  .programHeader .programBannerBg {
-    background-image: url("../images/banner_sm.svg");
-    top: 0;
-    left: 0;
-    background-size: cover;
+    width: 885px;
+    height: 546px;
+    left: calc(100% - 885px);
   }
 }
 
@@ -15711,17 +15700,17 @@ ul {
 }
 
 .schemeSelection .peopleNumber {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  overflow-x: auto;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 992px) {
   .schemeSelection .peopleNumber {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    overflow-x: scroll;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -15748,11 +15737,11 @@ ul {
 
 .goTop {
   display: none;
-  width: 71px;
-  height: 71px;
-  line-height: 71px;
-  bottom: 24px;
-  right: 48px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  bottom: 16px;
+  right: 16px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -15762,14 +15751,13 @@ ul {
   transition: .25s;
 }
 
-@media (max-width: 576px) {
+@media (min-width: 576px) {
   .goTop {
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    bottom: 16px;
-    right: 16px;
-    font-size: 14px;
+    width: 71px;
+    height: 71px;
+    line-height: 71px;
+    bottom: 24px;
+    right: 48px;
   }
 }
 /*# sourceMappingURL=all.css.map */

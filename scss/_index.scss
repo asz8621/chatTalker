@@ -1,33 +1,32 @@
 .header{
-  margin-bottom: 217px;
-  @media (max-width: 576px) {
-    margin-bottom: 92px;
+  margin-bottom: 92px;
+  @include media-breakpoint-up(sm) {
+    margin-bottom: 217px;
   }
   .headerBg {
-    background-image: url('../images/bg_home.svg');
-    width: 850px;
-    height: 768px;
-    top: 0;
-    left: calc(100% - 850px);
+    background-image: url('../images/bg_home_sm.svg');
+    background-position: right;
+    width: calc(100% - 40px);
+    height: 245px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);  
     z-index: -1;
     transition: .25s;
-    @media (max-width: 992px) {
+    @include media-breakpoint-customize('min', '375px') {
+      width: 334px;
+    }
+    @include media-breakpoint-up(sm) {
+      background-image: url('../images/bg_home.svg');
       width: 100%;
       height: 100%;
-      background-position: right;
-      left: 0;
     }
-    @media (max-width: 576px) {
-      background-image: url('../images/bg_home_sm.svg');
-      width: 334px;
-      height: 245px;
-      top: 100%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -100%);
-    }
-    @media (max-width: 375px) {
-      width: calc(100% - 40px);
+    @include media-breakpoint-up(lg) {
+      width: 850px;
+      height: 768px;
+      top: 0;
+      left: calc(100% - 850px);
+      transform: none;
     }
   }
   .banner {
@@ -37,15 +36,7 @@
     background-image: url('../images/home.svg');
     width: 100%;
     padding-bottom: 100%;
-    @media (max-width: 576px) {
-      width: 305px;
-      height: 305px;
-      padding-bottom: 0;
-      margin: auto;
-    }
-    @media (max-width: 375px) {
-      width: 100%;
-    }
+    margin: auto;
   }
 }
 
@@ -53,36 +44,37 @@
   &::before {
     content: '';
     position: absolute;
-    top: -85%;
+    top: 16px;
     left: 0;
     background-image: url('../images/ball01.svg');
     background-size: cover;
-    width: 138px;
-    height: 360px;
+    width: 49px;
+    height: 126px;
+    top: 16px;
     transform: rotate(180deg);
     transition: .25s;
-    @media (max-width: 992px) {
-      width: 108px;
-      height: 282px;
-      top: -50%;
-    }
-    @media (max-width: 768px) {
+    @include media-breakpoint-up(sm) {
       width: 78px;
       height: 204px;
       top: -25%;
     }
-    @media (max-width: 576px) {
-      width: 49px;
-      height: 126px;
-      top: 16px;
+    @include media-breakpoint-up(md) {
+      width: 108px;
+      height: 282px;
+      top: -50%;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 138px;
+      height: 360px;
+      top: -85%;
     }
   }
   .platformImg {
-    width: 90px;
-    height: 90px;
-    @media (max-width: 576px) {
-      width: 60px;
-      height: 60px;
+    width: 60px;
+    height: 60px;
+    @include media-breakpoint-up(sm) {
+      width: 90px;
+      height: 90px;
     }
   }
 }
@@ -91,27 +83,27 @@
   &::after {
     content: '';
     position: absolute;
-    bottom: -35%;
+    bottom: -45px;
     right: 0;
-    width: 210px;
-    height: 310px;
+    width: 88px;
+    height: 135px;
     background-image: url('../images/ball02.svg');
     background-size: cover;
     z-index: -1;
     transition: .25s;
-    @media (max-width: 992px) {
+    @include media-breakpoint-up(sm) {
+      width: 130px;
+      height: 194px;
+    }
+    @include media-breakpoint-up(md) {
       width: 170px;
       height: 252px;
       bottom: -10%;
     }
-    @media (max-width: 768px) {
-      width: 130px;
-      height: 194px;
-      bottom: -45px;
-    }
-    @media (max-width: 576px) {
-      width: 88px;
-      height: 135px;
+    @include media-breakpoint-up(lg) {
+      width: 210px;
+      height: 310px;
+      bottom: -35%;
     }
   }
 }
@@ -129,17 +121,18 @@
     content: '';
     position: absolute;
     top: 36px;
-    left: 48px;
+    left: 0;
     background-image: url('../images/ball03.svg');
     background-size: cover;
-    width: 150px;
+    width: 77px;
     height: 150px;
     transition: .25s;
     z-index: -1;
-    @media (max-width: 768px) {
-      width: 77px;
-      left: 0;
-      transform: rotate(180deg);
+    transform: rotate(180deg);
+    @include media-breakpoint-up(md) {
+      width: 150px;
+      left: 48px;
+      transform: rotate(0deg);
     }
   }
   .evaluationImg {
